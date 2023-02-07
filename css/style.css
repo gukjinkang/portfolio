@@ -56,7 +56,10 @@ body {
 ol, ul {
 	list-style: none;
 }
-button{
+a {
+	text-decoration: none;
+}
+button {
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -101,6 +104,7 @@ h2{
 	font-size: 50px;
 	font-weight: 700;
   font-family:'bitbit';
+	text-align: center;
 }
 h2:after{
 	content: '';
@@ -286,6 +290,9 @@ h3{
 }
 
 #about .inner .about_con .right{}
+#about .inner .about_con .right h2{
+	text-align: left;
+}
 #about .inner .about_con .right h2::after{
 	left: 0; 
 	transform: none;
@@ -303,9 +310,87 @@ h3{
 
 
 /*portfolio*/
-#portfolio{
-	
+#portfolio .inner{
+	height: 100vh;
 }
+
+#portfolio .inner .card{
+	position: absolute; 
+	right: 0; 
+	width: 75%; 
+	height: 450px;
+	padding: 40px 0;
+	border-radius: 10px;
+	background-color: #fff; 
+	box-shadow: 0 0 15px rgba(1, 93, 204, .5);
+}
+
+#portfolio .inner .card .img_box{
+	float: left;
+	margin: 0 40px 0 -300px;}
+#portfolio .inner .card .img_box img{
+	width: 100%; 
+	max-width: 582px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 35%);
+}
+
+#portfolio .inner .card .text_con{
+}
+#portfolio .inner .card .text_con h3{
+	position: relative;
+	display: inline-block;
+	margin: -10px 0 54px;
+	text-transform: uppercase;
+}
+#portfolio .inner .card .text_con h3::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	height: 2px;
+	margin: 0px 0 -27px 3px;
+	background: #222;
+}
+#portfolio .inner .card .text_con h4{
+	margin: -5px 0 30px;
+	font-size: 36px;
+	font-weight: 400;
+}
+#portfolio .inner .card .text_con .info{
+	font-family: 'Roboto', sans-serif;
+}
+#portfolio .inner .card .text_con .info_title{
+	margin-bottom: 14px;
+	font-size: 24px;
+	font-weight: 500;
+}
+#portfolio .inner .card .text_con .info_desc{
+	margin-bottom: 24px;
+	font-size: 18px;
+	font-weight: 400;
+}
+#portfolio .inner .card .text_con .info_desc:last-child{
+	margin-bottom: 53px;
+}
+#portfolio .inner .card .text_con .pf_btn{
+	width: 140px;
+	height: 40px;
+	border: 1px solid #222;
+	border-radius: 5px;
+	transition: .2s;
+}
+#portfolio .inner .card .text_con .pf_btn:hover{
+	background: #015dcc;
+	border: 1px solid #015dcc;
+}
+#portfolio .inner .card .text_con .pf_btn a{
+	color: #222;
+	font-size: 20px;
+	font-weight: 700;
+}
+
 
 /*skill*/
 #skill{
@@ -343,7 +428,7 @@ h3{
 	}
 
 	#header .inner .logo{
-		left: 20px;
+		left: 15px;
 	}
 
 	
@@ -373,7 +458,7 @@ h3{
 		position: fixed;
 		display: block;
 		top: 25px;
-		right: 20px;
+		right: 15px;
 		z-index: 999;
 	}
 	#header .inner .mb_btn .menu{
