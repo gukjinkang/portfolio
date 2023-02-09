@@ -197,24 +197,22 @@ h3{
 	padding: 0;
 }
 
-/* #intro .fixed_con .inner .title_con{
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-} */
-#intro .fixed_con .inner .title{
+#intro .fixed_con .inner .title_con{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 30%;
+}
+#intro .fixed_con .inner .title_con .title{
 	display: flex;
 	flex-direction: column;
-	top: 30%;
 	margin-bottom: 0;
 	color: #fff;
 	font-size: 70px;
-	letter-spacing: .5rem;
-	line-height: 1.5em;
+	line-height: 1.25
 	
 }
-#intro .fixed_con .inner h2::after{
+#intro .fixed_con .inner .title_con .title::after{
 	display: none;
 }
 
@@ -545,9 +543,8 @@ h3{
 
 
 	/*intro*/
-	#intro .fixed_con .inner .title{
-		top: 35%;
-		font-size: 50px;
+	#intro .fixed_con .inner .title_con .title{
+		font-size: 7vw;
 	}
 
 	/*about*/
@@ -607,9 +604,15 @@ h3{
 	}
 
 	/*intro*/
-	#intro .fixed_con .inner .title{
-		top: 40%;
-		font-size: 40px;
+	#intro .fixed_con .inner .title_con {
+		top: 35%;
+	}
+	#intro .fixed_con .inner .title_con .title{
+		font-size: 8vw;
+	}
+
+	#intro .space{
+		bottom: -40px;
 	}
 
 	/*about*/
