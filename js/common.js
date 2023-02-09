@@ -247,3 +247,33 @@ Star.prototype.draw = function() {
 
   context.restore();
 }
+
+/*intro title*/
+var leftAni = document.getElementById('intro_title1'),
+    rightAni = document.getElementById('intro_title2');
+
+;(function(){
+
+  var throttle = function(type, name, obj){
+    var obj = obj || window;
+    var running = false;
+    var func = function(){
+      if (running){ return; }
+      running = true;
+      requestAnimationFrame(function(){
+        obj.dispatchEvent(new CustomEvent(name));
+        running = false;
+      });
+    };
+    obj.addEventListener(type, func);
+  };
+
+  throttle("scroll", "optimizedScroll"); //optimizedScroll은 스크롤 작동을 하게
+})();
+
+window.addEventListener("optimizedScroll", function(){
+
+  leftAni.style.transform = "translate(" + window.pageYOffset + "%)";
+  rightAni.style.transform = "translate(-" + window.pageYOffset + "%)";
+})
+
