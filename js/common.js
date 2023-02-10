@@ -163,7 +163,7 @@ $(function() {
 
   //크기값 계산
   screenH = $(window).height();
-  screenW = $(window).width();
+  screenW = 1920;
 
   //캔버스 불러오기
   canvas = $('#star');
